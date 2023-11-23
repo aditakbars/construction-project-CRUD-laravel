@@ -104,7 +104,7 @@
                 </a>
                 <div class="collapse" id="vendor">
                     <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('vendor.trash')}}">Daftar Vendor</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('vendor.index')}}">Daftar Vendor</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{route('vendor.trash')}}">Sampah</a></li>
                     </ul>
                 </div>
