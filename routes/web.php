@@ -42,7 +42,7 @@ Route::post('manager/{id}/remove', [ManagerController::class, 'remove'])->name('
 Route::post('manager/{id}/restore', [ManagerController::class, 'restore'])->name('manager.restore');
 
 Route::get('vendor', [VendorController::class, 'index'])->name('vendor.index');
-Route::get('vendor/trash', [VendorController::class, 'trash'])->name('vendor.trash');
+Route::get('vendor/trash', [VendorContmanagerroller::class, 'trash'])->name('vendor.trash');
 Route::get('vendor/add', [VendorController::class, 'create'])->name('vendor.create');
 Route::post('vendor/store', [VendorController::class, 'store'])->name('vendor.store');
 Route::get('vendor/{id}/edit', [VendorController::class, 'edit'])->name('vendor.edit');
@@ -50,3 +50,13 @@ Route::post('vendor/{id}/update', [VendorController::class, 'update'])->name('ve
 Route::post('vendor/{id}/delete', [VendorController::class, 'delete'])->name('vendor.delete');
 Route::post('vendor/{id}/remove', [VendorController::class, 'remove'])->name('vendor.remove');
 Route::post('vendor/{id}/restore', [VendorController::class, 'restore'])->name('vendor.restore');
+
+Route::get('proyek', [ProyekController::class, 'index'])->name('proyek.index');
+Route::get('proyek/trash', [ProyekController::class, 'trash'])->name('proyek.trash');
+Route::get('proyek/add', [ProyekController::class, 'create'])->name('proyek.create');
+Route::post('proyek/store', [ProyekController::class, 'store'])->name('proyek.store');
+Route::get('proyek/{id}/edit', [ProyekController::class, 'edit'])->name('proyek.edit');
+Route::post('proyek/{id}/update', [ProyekController::class, 'update'])->name('proyek.update');
+Route::post('proyek/{id}/delete', [ProyekController::class, 'delete'])->name('proyek.delete');
+Route::post('proyek/{id}/remove', [ProyekController::class, 'remove'])->name('proyek.remove');
+Route::post('proyek/{id}/restore', [ProyekController::class, 'restore'])->name('proyek.restore');
