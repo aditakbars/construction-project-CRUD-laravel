@@ -20,6 +20,12 @@ use App\Http\Controllers\ProyekController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('login', function () {
+    return view('login');
+});
+Route::get('register', function () {
+    return view('register');
+});
 
 Route::get('klien', [KlienController::class, 'index'])->name('klien.index');
 Route::get('klien/trash', [KlienController::class, 'trash'])->name('klien.trash');
