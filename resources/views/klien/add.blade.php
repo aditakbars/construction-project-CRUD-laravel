@@ -1,45 +1,49 @@
-@extends('layout')
+@extends('sidebar')
+
 @section('content')
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Tambah Data Klien</h4>
+                <form class="forms-sample" method="post" action="{{route('klien.store')}}">
+                @csrf
+                <div class="form-group row">
+                    <label for="id_klien" class="col-sm-3 col-form-label">ID Klien</label>
+                    <div class="col-sm-9 text-dark">
+                        <input type="number" class="form-control text-dark" id="id_klien" name="id_klien" placeholder="Masukkan ID">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nama_klien" class="col-sm-3 col-form-label">Nama Klien</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nama_klien" name="nama_klien" placeholder="Masukkan Nama">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="telepon" class="col-sm-3 col-form-label">Telepon</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="industri" class="col-sm-3 col-form-label">Industri</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="industri" name="industri" placeholder="Masukkan Industri Klien">
+                    </div>
+                </div>
 
-@if($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-
-<div class="card mt-4">
-    <div class="card-body">
-        <h5 class="card-title fw-bolder mb-3">Tambah Klien</h5>
-        <form method="post" action="{{route('klien.store')}}">
-            @csrf
-            <div class="mb-3">
-                <label for="id_klien" class="form-label">ID Klien</label>
-                <input type="number" class="form-control" id="id_klien" name="id_klien">
+                <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                <a href="{{route('klien.index')}}" class="btn btn-light">Batal</a>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="nama_klien" class="form-label">Nama Klien</label>
-                <input type="text" class="form-control" id="nama_klien" name="nama_klien">
-            </div>
-            <div class="mb-3">
-                <label for="telepon" class="form-label">Telepon</label>
-                <input type="text" class="form-control" id="telepon" name="telepon">
-            </div>
-            <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamat" name="alamat">
-            </div>
-            <div class="mb-3">
-                <label for="industri" class="form-label">Industri</label>
-                <input type="text" class="form-control" id="industri" name="industri">
-            </div>
-            <div class="text-center">
-                <input type="submit" class="btn btn-primary" value="Tambah" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 @stop

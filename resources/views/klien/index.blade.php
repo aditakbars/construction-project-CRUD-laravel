@@ -1,16 +1,16 @@
 @extends('sidebar')
 
 @section('content')
-    <div class="row">
+<div class="row">
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <div class="d-sm-flex align-items-center mb-4">
                 <h4 class="card-title mb-sm-0">Daftar Klien</h4>
                 <form action="{{route('klien.index')}}" method="GET" class="mr-0 ml-auto mb-1 mb-sm-0">
-                    <input type="text" name="search" class="form-control rounded-1" placeholder="Cari Klien..." value="{{$searchTerm}}">
+                    <input type="text" name="search" class="form-control rounded-1 text-dark" placeholder="Cari Klien..." value="{{$searchTerm}}">
                 </form>
-                <a href="#" class="btn btn-lg btn-inverse-info p-2 mr-1 ml-3 mb-1 mb-sm-0"> Tambah Data Klien</a>
+                <a href="{{route('klien.create')}}" class="btn btn-lg btn-inverse-info p-2 mr-1 ml-3 mb-1 mb-sm-0"> Tambah Data Klien</a>
                 </div>
                 <div class="table-responsive border rounded p-1 ">
                     <table class="table table-hover">
@@ -36,6 +36,7 @@
                                     <a href="{{ route('klien.edit', $data->id_klien) }}" class="btn btn-primary p-2">Edit</a>
                                     <button class="btn btn-danger p-2 ml-1" data-bs-toggle="modal" data-bs-target="#hapusModal{{ $data->id_klien }}">Delete</button>
 
+                                    <!-- Modals -->
                                     <div class="modal fade" id="hapusModal{{ $data->id_klien }}" tabindex="-1"
                                         aria-labelledby="hapusModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -61,12 +62,11 @@
                                 </td>
                             </tr>
                             @endforeach
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
-                </div>
-                </div>
-            @stop
+            </div>
+        </div>
+    </div>
+</div>
+@stop

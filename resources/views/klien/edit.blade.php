@@ -1,43 +1,43 @@
-@extends('layout')
+@extends('sidebar')
 
 @section('content')
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Ubah Data Klien</h4>
+                <form class="forms-sample" method="post" action="{{route('klien.update', $data->id_klien)}}">
+                @csrf
+                <div class="form-group row">
+                    <label for="nama_klien" class="col-sm-3 col-form-label">Nama Klien</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nama_klien" name="nama_klien" placeholder="Masukkan Nama" value="{{ $data->nama_klien }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="telepon" class="col-sm-3 col-form-label">Telepon</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon" value="{{ $data->telepon }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat" value="{{ $data->alamat }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="industri" class="col-sm-3 col-form-label">Industri</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="industri" name="industri" placeholder="Masukkan Industri Klien" value="{{ $data->industri }}">
+                    </div>
+                </div>
 
-@if($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-
-        @endforeach
-    </ul>
-</div>
-@endif
-
-<div class="card mt-4">
-    <div class="card-body">
-        <h5 class="card-title fw-bolder mb-3">Ubah Data Klien</h5>
-        <form method="post" action="{{ route('klien.update', $data->id_klien) }}">
-            @csrf
-            <div class="mb-3">
-                <label for="nama_klien" class="form-label">Nama Klien</label>
-                <input type="text" class="form-control" id="nama_klien" name="nama_klien" value="{{ $data->nama_klien }}">
+                <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                <button class="btn btn-light">Batal</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="telepon" class="form-label">Telepon</label>
-                <input type="text" class="form-control" id="telepon" name="telepon" value="{{ $data->telepon }}">
-            </div>
-            <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $data->alamat }}">
-            </div>
-            <div class="mb-3">
-                <label for="industri" class="form-label">Industri</label>
-                <input type="text" class="form-control" id="industri" name="industri" value="{{ $data->industri }}">
-            </div>
-            <div class="text-center">
-                <input type="submit" class="btn btn-primary" value="Ubah" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 @stop
