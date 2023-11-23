@@ -61,12 +61,23 @@
 
                 <li class="nav-item nav-category">
                 <span class="nav-link">Dashboard</span>
+                
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="{{route('proyek.index')}}">
+                <a class="nav-link" href="{{route('proyek.index')}}" aria-expanded="true">
                     <span class="menu-title">Dashboard</span>
                     <i class="icon-screen-desktop menu-icon"></i>
                 </a>
+                <div class="collapse" id="proyek">
+                    <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
+                </ul> -->
                 </li>
                 <li class="nav-item nav-category"><span class="nav-link">Halaman per Tabel</span></li>
 
