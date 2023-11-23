@@ -19,7 +19,7 @@ class ProyekController extends Controller
             JOIN manager ON proyek.id_manager = manager.id_manager 
             JOIN klien ON proyek.id_klien = klien.id_klien 
             JOIN vendor ON proyek.id_vendor = vendor.id_vendor 
-            WHERE nama_vendor LIKE ? AND proyek.deleted = 0', ['%' . $searchTerm . '%']);
+            WHERE nama_proyek LIKE ? AND proyek.deleted = 0', ['%' . $searchTerm . '%']);
         } else {
             // Jika tidak ada search term, tampilkan semua data proyek
             $datas = DB::select('SELECT * 
@@ -45,7 +45,7 @@ class ProyekController extends Controller
             JOIN manager ON proyek.id_manager = manager.id_manager 
             JOIN klien ON proyek.id_klien = klien.id_klien 
             JOIN vendor ON proyek.id_vendor = vendor.id_vendor 
-            WHERE nama_vendor LIKE ? AND proyek.deleted = 1', ['%' . $searchTerm . '%']);
+            WHERE nama_proyek LIKE ? AND proyek.deleted = 1', ['%' . $searchTerm . '%']);
         } else {
             // Jika tidak ada search term, tampilkan semua data proyek
             $datas = DB::select('SELECT * 
