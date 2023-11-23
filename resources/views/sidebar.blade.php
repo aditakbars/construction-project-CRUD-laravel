@@ -71,7 +71,7 @@
                 <li class="nav-item nav-category"><span class="nav-link">Halaman per Tabel</span></li>
 
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#klien" aria-expanded="false" aria-controls="klien">
+                <a class="nav-link" data-toggle="collapse" href="#klien" aria-expanded="false">
                     <span class="menu-title">Klien</span>
                     <i class="icon-layers menu-icon"></i>
                 </a>
@@ -85,7 +85,7 @@
 
 
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#manager" aria-expanded="false" aria-controls="manager">
+                <a class="nav-link" data-toggle="collapse" href="#manager" aria-expanded="false">
                     <span class="menu-title">Manager</span>
                     <i class="icon-layers menu-icon"></i>
                 </a>
@@ -97,9 +97,8 @@
                 </div>
                 </li>
 
-
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#vendor" aria-expanded="false" aria-controls="vendor">
+                <a class="nav-link" data-toggle="collapse" href="#vendor" aria-expanded="false">
                     <span class="menu-title">Vendor</span>
                     <i class="icon-layers menu-icon"></i>
                 </a>
