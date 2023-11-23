@@ -63,7 +63,7 @@
                 <span class="nav-link">Dashboard</span>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('proyek.index')}}">
                     <span class="menu-title">Dashboard</span>
                     <i class="icon-screen-desktop menu-icon"></i>
                 </a>
@@ -91,8 +91,8 @@
                 </a>
                 <div class="collapse" id="manager">
                     <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Daftar Manager</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Sampah</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('manager.index')}}">Daftar Manager</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('manager.trash')}}">Sampah</a></li>
                     </ul>
                 </div>
                 </li>
@@ -105,8 +105,8 @@
                 </a>
                 <div class="collapse" id="vendor">
                     <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Daftar Vendor</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Sampah</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('vendor.trash')}}">Daftar Vendor</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('vendor.trash')}}">Sampah</a></li>
                     </ul>
                 </div>
                 </li>
