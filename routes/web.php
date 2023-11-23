@@ -26,3 +26,4 @@ Route::get('klien/{id}/edit', [KlienController::class, 'edit'])->name('klien.edi
 Route::post('klien/{id}/update', [KlienController::class, 'update'])->name('klien.update');
 Route::post('klien/{id}/delete', [KlienController::class, 'delete'])->name('klien.delete');
 Route::post('klien/{id}/remove', [KlienController::class, 'remove'])->name('klien.remove');
+Route::post('klien/{id}/restore', [KlienController::class, 'restore'])->name('klien.restore');
