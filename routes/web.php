@@ -42,7 +42,7 @@ Route::post('manager/{id}/remove', [ManagerController::class, 'remove'])->name('
 Route::post('manager/{id}/restore', [ManagerController::class, 'restore'])->name('manager.restore');
 
 Route::get('vendor', [VendorController::class, 'index'])->name('vendor.index');
-Route::get('vendor/trash', [VendorContmanagerroller::class, 'trash'])->name('vendor.trash');
+Route::get('vendor/trash', [VendorController::class, 'trash'])->name('vendor.trash');
 Route::get('vendor/add', [VendorController::class, 'create'])->name('vendor.create');
 Route::post('vendor/store', [VendorController::class, 'store'])->name('vendor.store');
 Route::get('vendor/{id}/edit', [VendorController::class, 'edit'])->name('vendor.edit');
