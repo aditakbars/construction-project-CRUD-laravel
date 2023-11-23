@@ -11,7 +11,7 @@
 </div>
 @endif
 
-<form action="{{route('klien.index')}}" method="GET" class="mb-3 mt-1">
+<form action="{{route('klien.trash')}}" method="GET" class="mb-3 mt-1">
     <input type="text" name="search" class="form-control rounded-1" placeholder="Cari Klien" value="{{$searchTerm}}">
 </form>
 
