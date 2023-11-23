@@ -40,3 +40,13 @@ Route::post('manager/{id}/update', [ManagerController::class, 'update'])->name('
 Route::post('manager/{id}/delete', [ManagerController::class, 'delete'])->name('manager.delete');
 Route::post('manager/{id}/remove', [ManagerController::class, 'remove'])->name('manager.remove');
 Route::post('manager/{id}/restore', [ManagerController::class, 'restore'])->name('manager.restore');
+
+Route::get('vendor', [VendorController::class, 'index'])->name('vendor.index');
+Route::get('vendor/trash', [VendorController::class, 'trash'])->name('vendor.trash');
+Route::get('vendor/add', [VendorController::class, 'create'])->name('vendor.create');
+Route::post('vendor/store', [VendorController::class, 'store'])->name('vendor.store');
+Route::get('vendor/{id}/edit', [VendorController::class, 'edit'])->name('vendor.edit');
+Route::post('vendor/{id}/update', [VendorController::class, 'update'])->name('vendor.update');
+Route::post('vendor/{id}/delete', [VendorController::class, 'delete'])->name('vendor.delete');
+Route::post('vendor/{id}/remove', [VendorController::class, 'remove'])->name('vendor.remove');
+Route::post('vendor/{id}/restore', [VendorController::class, 'restore'])->name('vendor.restore');
