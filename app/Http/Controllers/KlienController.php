@@ -20,7 +20,7 @@ class KlienController extends Controller
             $datas = DB::select('SELECT * FROM klien WHERE deleted = 0');
         }
     
-        return view('klien.index')->with('datas', $datas)->with('searchTerm', $searchTerm);
+        return view('klien.cobaklien')->with('datas', $datas)->with('searchTerm', $searchTerm);
     }
     
     //to show deleted data
