@@ -107,7 +107,7 @@ class VendorController extends Controller
     public function restore($id)
     {
         DB::update('UPDATE vendor SET deleted = 0 WHERE id_vendor = :id_vendor', ['id_vendor' => $id]);
-        return redirect()->route('vendor.index')->with('success', 'Data Vendor berhasil dipulihkan');
+        return redirect()->route('vendor.trash')->with('success', 'Data Vendor berhasil dipulihkan');
     }
 
     public function remove($id)
