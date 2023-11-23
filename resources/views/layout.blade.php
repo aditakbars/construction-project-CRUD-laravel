@@ -16,14 +16,19 @@
         </style>
     </head>
     <body class="antialiased">
+        <h3> Tugas Akhir SBD</h3>
         <nav class="navbar bg-light">
             <div class="container-fluid">
-            <a class="navbar-brand" href="{{route('klien.index')}}">Tugas Akhir SBD - Kelompok 42</a>
+            <a class="navbar-brand" href="{{route('proyek.index')}}">Proyek</a>
+            <a class="navbar-brand" href="{{route('klien.index')}}">Klien</a>
+            <a class="navbar-brand" href="{{route('manager.index')}}">Manager</a>
+            <a class="navbar-brand" href="{{route('vendor.index')}}">Vendor</a>
             </div>
         </nav>
         <div class="container">
-            
+
         @yield('content')
+        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
