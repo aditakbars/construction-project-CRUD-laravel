@@ -43,8 +43,11 @@
                         <p class="mb-1 mt-3">{{ Auth::user()->name }}</p>
                         <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
                     </div>
-                    <a class="dropdown-item" :href="{{ route('profile.edit') }}"><i class="dropdown-item-icon icon-user text-primary"></i>{{ __('My Profile') }}</a>
-                    <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
+                    <x-dropdown-link class="dropdown-item" :href="route('profile.edit')">
+                        <i class="dropdown-item-icon icon-user text-primary"></i>
+                        {{ __('My Profile') }}
+                    </x-dropdown-link>
+                    <form class="dropdown-item ml-2" method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a :href="route('logout')"
                                 onclick="event.preventDefault();
