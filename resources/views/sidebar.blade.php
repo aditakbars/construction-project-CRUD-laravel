@@ -43,6 +43,7 @@
                         <p class="mb-1 mt-3">{{ Auth::user()->name }}</p>
                         <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
                     </div>
+                    <a class="dropdown-item" :href="{{ route('profile.edit') }}"><i class="dropdown-item-icon icon-user text-primary"></i>{{ __('My Profile') }}</a>
                     <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a :href="route('logout')"
@@ -80,9 +81,6 @@
                     </ul>
                 </div>
 
-                <!-- <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
-                </ul> -->
                 </li>
                 <li class="nav-item nav-category"><span class="nav-link">Halaman per Tabel</span></li>
 
