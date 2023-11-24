@@ -36,13 +36,14 @@
             <ul class="navbar-nav navbar-nav-right ml-auto">
                 <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
                 <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                    <img class="img-xs rounded-circle ml-2" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image"> <span class="font-weight-normal"> Henry Klein </span></a>
+                <img class="img-xs rounded-circle ml-2" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image"> <span class="font-weight-normal"> Henry Klein </span></a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                     <div class="dropdown-header text-center">
-                    <img class="img-md rounded-circle" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image">
-                    <p class="mb-1 mt-3">Allen Moreno</p>
-                    <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                        <img class="img-md rounded-circle" src="{{ asset('images/faces/face8.jpg')}}" alt="Profile image">
+                        <p class="mb-1 mt-3">Allen Moreno</p>
+                        <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
                     </div>
+                    <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
                 </div>
                 </li>
             </ul>
@@ -71,7 +72,6 @@
                     <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
                     </ul>
                 </div>
-
 
                 <!-- <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
