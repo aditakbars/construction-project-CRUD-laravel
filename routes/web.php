@@ -61,7 +61,7 @@ Route::middleware('auth')->group(function () {
     Route::post('vendor/{id}/remove', [VendorController::class, 'remove'])->name('vendor.remove');
     Route::post('vendor/{id}/restore', [VendorController::class, 'restore'])->name('vendor.restore');
 
-    Route::get('proyek', [ProyekController::class, 'index'])->name('proyek.index');
+    Route::get('dashboard', [ProyekController::class, 'index'])->name('proyek.index');
     Route::get('proyek/trash', [ProyekController::class, 'trash'])->name('proyek.trash');
     Route::get('proyek/add', [ProyekController::class, 'create'])->name('proyek.create');
     Route::post('proyek/store', [ProyekController::class, 'store'])->name('proyek.store');

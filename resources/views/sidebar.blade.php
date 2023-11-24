@@ -74,7 +74,7 @@
                     <span class="menu-title">Dashboard</span>
                     <i class="icon-screen-desktop menu-icon"></i>
                 </a>
-                <div class="collapse" id="proyek">
+                <div id="dashboard">
                     <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{route('proyek.trash')}}">Sampah</a></li>
                     </ul>
