@@ -35,7 +35,7 @@
                 <div class="form-group row">
                     <label for="anggaran" class="col-sm-3 col-form-label">Anggaran</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="anggaran" name="anggaran" placeholder="Masukkan Anggaran Proyek">
+                        <input type="number" class="form-control" id="anggaran" name="anggaran" placeholder="Masukkan Anggaran Proyek">
                     </div>
                 </div>
 

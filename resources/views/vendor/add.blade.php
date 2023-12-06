@@ -23,7 +23,7 @@
                 <div class="form-group row">
                     <label for="telepon" class="col-sm-3 col-form-label">Telepon</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+                        <input type="number" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
                     </div>
                 </div>
                 <div class="form-group row">

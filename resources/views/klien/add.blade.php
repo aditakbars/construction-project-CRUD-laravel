@@ -8,12 +8,12 @@
                 <h4 class="card-title">Tambah Data Klien</h4>
                 <form class="forms-sample" method="post" action="{{route('klien.store')}}">
                 @csrf
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                     <label for="id_klien" class="col-sm-3 col-form-label">ID Klien</label>
                     <div class="col-sm-9 text-dark">
                         <input type="number" class="form-control text-dark" id="id_klien" name="id_klien" placeholder="Masukkan ID">
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group row">
                     <label for="nama_klien" class="col-sm-3 col-form-label">Nama Klien</label>
                     <div class="col-sm-9">
@@ -23,7 +23,7 @@
                 <div class="form-group row">
                     <label for="telepon" class="col-sm-3 col-form-label">Telepon</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
+                        <input type="number" class="form-control" id="telepon" name="telepon" placeholder="Masukkan nomor telepon">
                     </div>
                 </div>
                 <div class="form-group row">

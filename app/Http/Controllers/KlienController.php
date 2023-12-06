@@ -47,16 +47,15 @@ class KlienController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_klien' => 'required',
             'nama_klien' => 'required',
-            'telepon' => 'required',
+            'telepon' => 'required' |'numeric',
             'alamat' => 'required',
             'industri' => 'required',
         ]);
         DB::insert(
             'INSERT INTO klien(id_klien,nama_klien, telepon, alamat, industri) VALUES (:id_klien, :nama_klien, :telepon, :alamat, :industri)',
             [
-                'id_klien' => $request->id_klien,
+                'id_klien' => uniqid (),
                 'nama_klien' => $request->nama_klien,
                 'telepon' => $request->telepon,
                 'alamat' => $request->alamat,
